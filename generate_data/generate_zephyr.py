@@ -1,16 +1,15 @@
 import sys
 from langchain.llms import Ollama
-from langchain.llms import Ollama
 from langchain.callbacks.manager import CallbackManager
 from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler   
 
-output_file = "generate_zephyr.txt"
+output_file = "/Users/eleanorewu/Latex-OCR/generate_data/generate_zephyr2.txt"
 
-llm = Ollama(base_url = "http://localhost:11434",
-             model = "zephyr",
-             callback_manager = CallbackManager([StreamingStdOutCallbackHandler()]))
+llm = Ollama(base_url="http://localhost:11434",
+             model="zephyr",
+             callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
 
-num_interactions = 10
+num_interactions = 20
 output_list = []
 
 for i in range(num_interactions):
@@ -19,5 +18,6 @@ for i in range(num_interactions):
 
 all_output = '\n'.join(output_list)
 
-with open(output_file, 'w', encoding='utf-8') as file:
+# Append to the existing file
+with open(output_file, 'a', encoding='utf-8') as file:
     file.write(all_output + "\n")
