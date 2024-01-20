@@ -9,7 +9,7 @@ llm = Ollama(base_url="http://localhost:11434",
              model="zephyr",
              callback_manager=CallbackManager([StreamingStdOutCallbackHandler()]))
 
-num_interactions = 20
+num_interactions = 10
 output_list = []
 
 for i in range(num_interactions):
