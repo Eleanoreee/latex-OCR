@@ -1,6 +1,6 @@
 # Specify paths
-lst_file_path = '/Users/eleanorewu/Latex-OCR/data/2/im2latex.lst'
-txt_file_path = '/Users/eleanorewu/Latex-OCR/data/2/im2latex.txt'
+lst_file_path = '/Users/eleanorewu/Latex-OCR/data/3/im2latex.lst'
+txt_file_path = '/Users/eleanorewu/Latex-OCR/data/3/im2latex.txt'
 
 # Read the .lst file and extract filenames
 with open(lst_file_path, 'r') as lst_file:

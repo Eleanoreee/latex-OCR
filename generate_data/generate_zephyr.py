@@ -1,9 +1,9 @@
 import sys
 from langchain.llms import Ollama
 from langchain.callbacks.manager import CallbackManager
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler   
+from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 
-output_file = "/Users/eleanorewu/Latex-OCR/generate_data/generate_zephyr2.txt"
+output_file = "/Users/eleanorewu/Latex-OCR/generate_data/generate_zephyr3.txt"
 
 llm = Ollama(base_url="http://localhost:11434",
              model="zephyr",
